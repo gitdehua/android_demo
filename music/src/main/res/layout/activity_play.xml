@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ImageView
+        android:id="@+id/music_bgimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#777777"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#da000000"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin" >
+
+        <TextView
+            android:id="@+id/music_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#f6f6f6" />
+
+        <TextView
+            android:id="@+id/music_singer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#dddddd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/music_img"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_gravity="center"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:gravity="center_vertical" >
+
+            <!-- 进度 -->
+
+            <TextView
+                android:id="@+id/music_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#eeeeee" />
+
+            <SeekBar
+                android:id="@+id/music_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100" />
+
+            <TextView
+                android:id="@+id/music_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textColor="#eeeeee" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_love"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_love"
+                android:onClick="onClick" />
+
+            <Button
+                android:id="@+id/btn_last"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_last"
+                android:onClick="onClick" />
+
+            <Button
+                android:id="@+id/btn_playorpause"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_play" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_next"
+                android:onClick="onClick" />
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/ic_stop"
+                android:onClick="onClick" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

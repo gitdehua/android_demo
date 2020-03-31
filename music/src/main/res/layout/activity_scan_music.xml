@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.ProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/help_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="扫描路径： /storage/sdcard/music/\n文件名格式：歌手  - 歌名\n扫描时需打开文件读写权限"
+        android:textSize="12sp" />
+
+    <ListView
+        android:id="@+id/res_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_add2paly"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape3"
+            android:onClick="onClick"
+            android:text="添加"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_delete_db"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape3"
+            android:onClick="onClick"
+            android:text="删除"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_scan"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape3"
+            android:onClick="onClick"
+            android:text="扫描"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>
